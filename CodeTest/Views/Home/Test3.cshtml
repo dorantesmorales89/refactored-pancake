@@ -1,4 +1,26 @@
-﻿@{
+﻿<!--[B]Dorantes 11/06/2024-->
+@{
     ViewBag.Title = "Test 3";
+    var results = ViewBag.Results as List<PruebaIngreso.Models.ApiResult>;
 }
-<h2>@ViewBag.Title.</h2>
+<h2>API Results:</h2>
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Margin</th>
+            <th>Status Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in results)
+        {
+            <tr>
+                <td>@result.Code</td>
+                <td>@result.Margin</td>
+                <td>@result.StatusCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!--[E]Dorantes 11/06/2024-->

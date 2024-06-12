@@ -49,12 +49,11 @@ namespace PruebaIngreso.Controllers
             ViewBag.Message = "Test 2 Correcto";
             return View();
         }
-
+                
         public ActionResult Test3()
         {
             return View();
         }
-
         public ActionResult Test4()
         {
             var request = new TourQuoteRequest

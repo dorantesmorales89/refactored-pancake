@@ -17,12 +17,15 @@
    <tbody>
       @foreach (var q in Model)
       {
-         <tr>
-            <th scope="row">@q.ContractService.ServiceCode</th>
-            <td>@q.adultNetRate</td>
-            <td>@q.adultRate</td>
-            <td>@( (1 - (q.adultNetRate / q.adultRate)) * 100)</td>
-         </tr>
+       <tr>
+           <th scope="row">@q.ContractService.ServiceCode</th>
+           <td>@q.adultNetRate</td>
+           <td>@q.adultRate</td>
+           <!--[B]Dorantes 11/06/2024-->
+           <td>@q.margin</td>
+           @*<td>@( (1 - (q.adultNetRate / q.adultRate)) * 100)</td>-->*@
+           <!--[E]Dorantes 11/06/2024-->
+       </tr>
       }
    </tbody>
 </table>
